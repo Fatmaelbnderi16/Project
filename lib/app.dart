@@ -5,6 +5,9 @@ import 'package:final_project/responsive.dart';
 import 'package:final_project/searching/webview.dart';
 import 'package:image_picker/image_picker.dart';
 
+ routes: {
+        'home': (context) => HomePage('', title: ''),
+      },
 class myHomePage extends StatefulWidget {
   const myHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -135,6 +138,7 @@ class _myHomePageState extends State<myHomePage> {
                                 Icons.play_circle_fill,
                                 size: _size.height() * 0.10,
                                 color: Colors.white,
+                                 onPressed: () => Navigator.of(context).pushNamed('home'),
                               ),
                             ),
                           ],
